@@ -1,0 +1,143 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SIM_Application
+build_property.RootNamespace = SIM_Application
+build_property.ProjectDir = C:\Users\Mouli Ravi\Desktop\C#\SIM_Application\SIM_Application\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Mouli Ravi\Desktop\C#\SIM_Application\SIM_Application
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/BankDetails/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0RldGFpbHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/BankDetails/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0RldGFpbHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/BankDetails/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0RldGFpbHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/BankDetails/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0RldGFpbHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/BankDetails/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0RldGFpbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/Shared/_AlertMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BbGVydE1lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/Shared/_LoginLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/Shared/_SIMLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TSU1MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/UserDetails/AddUserStockDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRldGFpbHNcQWRkVXNlclN0b2NrRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/UserDetails/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRldGFpbHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/UserDetails/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRldGFpbHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/UserDetails/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRldGFpbHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/UserDetails/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRldGFpbHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/UserDetails/FetchAllUsingJoin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRldGFpbHNcRmV0Y2hBbGxVc2luZ0pvaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/UserDetails/FetchAllUsingLazyLoading.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRldGFpbHNcRmV0Y2hBbGxVc2luZ0xhenlMb2FkaW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/UserDetails/FetchById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRldGFpbHNcRmV0Y2hCeUlkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/UserDetails/FetchUserDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRldGFpbHNcRmV0Y2hVc2VyRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/UserDetails/Filter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRldGFpbHNcRmlsdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/UserDetails/FilteredUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRldGFpbHNcRmlsdGVyZWRVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/UserDetails/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRldGFpbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/UserDetails/Transaction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRldGFpbHNcVHJhbnNhY3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mouli Ravi/Desktop/C\#/SIM_Application/SIM_Application/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-qha1ap72z9

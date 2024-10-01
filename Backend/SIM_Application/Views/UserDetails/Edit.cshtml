@@ -1,0 +1,145 @@
+﻿@model SIM_Application.Models.UserDetail
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "_SIMLayout";
+}
+
+
+
+<h1>Update</h1>
+<br>
+<div class="card">
+    <h5 class="card-header">Update User Details</h5>
+    <div class="card-body">
+        <form asp-action="Edit" asp-route-id="@Model.UserId">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="UserId" />
+            <input type="hidden" asp-for="BankDetailsId" />
+            <input type="hidden" asp-for="CreatedAt" />
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="UserName" class="form-control" placeholder="Enter Username">
+                        <label asp-for="UserName">User Name</label>
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="date" asp-for="DateOfBirth" class="form-control" placeholder="Enter Date of Birth">
+                        <label asp-for="DateOfBirth">Date Of Birth</label>
+                        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
+                        <label asp-for="RoleId">Role</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select asp-for="NationalityId" class="form-control" asp-items="ViewBag.NationalityId"></select>
+                        <label asp-for="NationalityId">Nationality</label>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select asp-for="GenderId" class="form-control" asp-items="ViewBag.GenderId"></select>
+                        <label asp-for="GenderId">Gender</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select asp-for="MaritalStatusId" class="form-control" asp-items="ViewBag.MaritalStatusId"></select>
+                        <label asp-for="MaritalStatusId">MaritalStatus</label>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="AddressLine1" class="form-control" placeholder="Enter Created At">
+                        <label asp-for="AddressLine1">Address Line</label>
+                        <span asp-validation-for="AddressLine1" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select asp-for="CityId" class="form-control" asp-items="ViewBag.CityId"></select>
+                        <label asp-for="CityId">City</label></span>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select asp-for="StateId" class="form-control" asp-items="ViewBag.StateId"></select>
+                        <label asp-for="StateId">State</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select asp-for="CountryId" class="form-control" asp-items="ViewBag.CountryId"></select>
+                        <label asp-for="CountryId">Country</label>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="MobileNumber" class="form-control" placeholder="Enter Mobile Number">
+                        <label asp-for="MobileNumber">Mobile Number</label>
+                        <span asp-validation-for="MobileNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="Occupation" class="form-control" placeholder="Enter Occupation">
+                        <label asp-for="Occupation">Occupation</label>
+                        <span asp-validation-for="Occupation" class="text-danger"></span>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="Email" class="form-control" placeholder="Enter Email">
+                        <label asp-for="Email">Email</label>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="AnnualIncome" class="form-control" placeholder="Enter Annual Income">
+                        <label asp-for="AnnualIncome">Annual Income</label>
+                        <span asp-validation-for="AnnualIncome" class="text-danger"></span>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row g-5">
+                <div class="col-md ">
+                    <div class="form-floating">
+                        <input asp-for="BalanceAmount" class="form-control" placeholder="Enter Balance Amount">
+                        <label asp-for="BalanceAmount">Balance Amount</label>
+                        <span asp-validation-for="BalanceAmount" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <button type="submit" class="btn btn-outline-primary" style="margin-left:280px;margin-top:10px">Update</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,94 @@
+﻿@model IEnumerable<SIM_Application.Models.UserDetailsWithBankDetails>
+
+@{
+    ViewData["Title"] = "View";
+    Layout = "_SIMLayout";
+}
+<h1>Fetch All Using Join</h1>
+<partial name="_AlertMessage" />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserDetails.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserDetails.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserDetails.Gender.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserDetails.MaritalStatus.MaritalStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserDetails.Nationality.Nationality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserDetails.MobileNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserDetails.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserDetails.Occupation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserDetails.AnnualIncome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BankDetails.BankName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BankDetails.Ifsc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BankDetails.AccountBalance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserDetails.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserDetails.DateOfBirth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserDetails.Gender.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserDetails.MaritalStatus.MaritalStatus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserDetails.Nationality.Nationality)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserDetails.MobileNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserDetails.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserDetails.Occupation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserDetails.AnnualIncome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BankDetails.BankName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BankDetails.Ifsc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BankDetails.AccountBalance)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

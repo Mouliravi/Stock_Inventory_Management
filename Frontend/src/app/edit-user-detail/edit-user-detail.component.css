@@ -1,0 +1,14 @@
+/* .user-bg{
+  background-color:rgba(239, 255, 239, 0.30)
+}
+.custom-width{
+  width: 65vw;
+} */
+.u-bg{
+  background-color: rgba(239, 239, 239, 0.50);
+}
+
+.custom-margin{
+  margin-top:10px;
+  margin-left:140px
+}

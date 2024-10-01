@@ -1,0 +1,113 @@
+﻿@model IEnumerable<SIM_Application.Models.UserDetail>
+
+@{
+    ViewData["Title"] = "View";
+    Layout = "_SIMLayout";
+}
+<h1>Fetch All Using Lazy Loading</h1>
+<partial name="_AlertMessage" />
+<table class=" table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddressLine1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MobileNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Occupation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnnualIncome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BalanceAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaritalStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nationality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfBirth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AddressLine1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MobileNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Occupation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AnnualIncome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BalanceAmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country.Country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaritalStatus.MaritalStatus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nationality.Nationality)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Role.Role)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.State.State)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

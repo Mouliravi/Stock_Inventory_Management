@@ -1,0 +1,106 @@
+
+<div *ngIf="status=='Edited'" class="alert alert-success alert-dismissible" role="alert">
+  <div>User Detail is successfully updated</div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div *ngIf="status=='Not Edited'" class="alert alert-danger alert-dismissible" role="alert">
+  <div>User Detail is not successfully updated</div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div *ngIf="userDetail" class="user-bg rounded p-5 container custom-width">
+    <h4 class="text-success">UserDetail</h4>
+    <hr />
+    <div class="row">
+      <div class="col-sm">
+        <div>UserName</div>
+        <div>DateOfBirth</div>
+        <div>Address</div>
+        <div>MobileNumber</div>
+        <div>Occupation</div>
+        <div>Email</div>
+        <div>AnnualIncome</div>
+        <div>BalanceAmount</div>
+	      <div>BankDetailsId</div>
+        <div>City</div>
+        <div>Country</div>
+        <div>Gender</div>
+        <div>MaritalStatus</div>
+        <div>Nationality</div>
+        <div>Role</div>
+        <div>State</div>
+      </div>
+      <div class="col-sm">
+        <div>
+          {{ userDetail.UserName }}
+        </div>
+
+        <div>
+          {{ userDetail.DateOfBirth }}
+        </div>
+
+        <div>
+          {{ userDetail.AddressLine1 }}
+        </div>
+
+        <div>
+          {{ userDetail.MobileNumber }}
+        </div>
+
+        <div>
+          {{ userDetail.Occupation }}
+        </div>
+
+        <div>
+          {{ userDetail.Email }}
+        </div>
+
+        <div>
+          {{ userDetail.AnnualIncome }}
+        </div>
+
+        <div>
+          {{ userDetail.BalanceAmount }}
+        </div>
+
+	      <div>
+          {{ userDetail.BankDetailsId }}
+        </div>
+
+        <div>
+          {{ userDetail.City.City }}
+        </div>
+
+        <div>
+          {{ userDetail.Country.Country }}
+        </div>
+
+        <div>
+          {{ userDetail.Gender.Gender }}
+        </div>
+
+        <div>
+          {{ userDetail.MaritalStatus.MaritalStatus }}
+        </div>
+
+        <div>
+          {{ userDetail.Nationality.Nationality }}
+        </div>
+
+        <div>
+          {{ userDetail.Role.Role }}
+        </div>
+
+        <div>
+          {{ userDetail.State.State }}
+        </div>
+      </div>
+    </div>
+    <br>
+    <div>
+        <a [routerLink]="['/editUserDetail']">Edit</a> |
+        <a [routerLink]="['/userDetail']">Back to List</a>
+    </div>
+</div>
+<br>

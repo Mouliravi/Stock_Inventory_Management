@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+body{
+    min-height:100%;
+    background: linear-gradient(0deg, rgba(216, 214, 214, 0.6), rgba(199, 199, 199, 0.6)), url("./assets/image/bg1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.user-bg{
+  background-color:rgba(239, 255, 239, 0.30)
+}
+.custom-width{
+  width:60vw;
+}
+.u-bg{
+  background-color: rgba(239, 239, 239, 0.50);
+}

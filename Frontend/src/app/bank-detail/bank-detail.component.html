@@ -1,0 +1,64 @@
+<section class="user-bg  rounded p-5">
+  <h1 class="text-success">Bank Details</h1>
+
+  <div *ngIf="status=='Bank Details not Edited'" class="alert alert-danger alert-dismissible" role="alert">
+    <div>Bank Detail is not Updated Successfully</div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <!-- <p>
+      <a [routerLink]="['/createBankDetail']">Create new</a>
+  </p> -->
+  <table class="table">
+      <thead>
+          <tr class="text-center">
+              <th>
+                  BankDetailsId
+              </th>
+              <th>
+                  BankName
+              </th>
+              <th>
+                  Ifsc
+              </th>
+              <th>
+                  Mcir
+              </th>
+              <th>
+                  AccountNumber
+              </th>
+              <th>
+                  AccountBalance
+              </th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let bankDetail of bankDetails" class="text-center">
+              <td>
+                  {{bankDetail.BankDetailsId}}
+              </td>
+              <td>
+                  {{bankDetail.BankName}}
+              </td>
+              <td>
+                  {{bankDetail.Ifsc}}
+              </td>
+              <td>
+                 {{bankDetail.Mcir}}
+              </td>
+              <td>
+                 {{bankDetail.AccountNumber}}
+              </td>
+              <td>
+                  {{bankDetail.AccountBalance}}
+              </td>
+              <td>
+                <a class="nav-link" (click)="editBankDetail(bankDetail.BankDetailsId)"><i class="bi bi-pencil-square"></i></a>
+                  <a class="nav-link" (click)="viewBankDetail(bankDetail.BankDetailsId)"><i class="bi bi-eye"></i></a>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</section>
+<br>

@@ -1,0 +1,64 @@
+
+<div *ngIf="status=='Bank Details Edited'" class="alert alert-success alert-dismissible" role="alert">
+  <div>Bank Detail is successfully edited</div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div  class="user-bg rounded p-5 container custom-width">
+  <h4 class="text-success">BankDetail</h4>
+    <hr />
+    <dl class="row">
+        <!-- <dt class = "col-sm-2">
+           BankName
+         </dt>
+        <dd class = "col-sm-10">
+           {{userDetail.UserName}}
+        </dd> -->
+        <dt class = "col-sm-2">
+            BankName
+        </dt>
+        <dd class = "col-sm-10">
+          {{bankDetail.BankName}}
+        </dd>
+        <dt class = "col-sm-2">
+            Ifsc
+        </dt>
+        <dd class = "col-sm-10">
+            {{bankDetail.Ifsc}}
+        </dd>
+        <dt class = "col-sm-2">
+            Mcir
+        </dt>
+        <dd class = "col-sm-10">
+            {{bankDetail.Mcir}}
+        </dd>
+        <dt class = "col-sm-2">
+            AccountNumber
+        </dt>
+        <dd class = "col-sm-10">
+           {{bankDetail.AccountNumber}}
+        </dd>
+        <dt class = "col-sm-2">
+            AccountBalance
+        </dt>
+        <dd class = "col-sm-10">
+          {{bankDetail.AccountBalance}}
+        </dd>
+        <!-- <dt class = "col-sm-2">
+            CreatedAt
+        </dt>
+        <dd class = "col-sm-10">
+            CreatedAt
+        </dd>
+        <dt class = "col-sm-2">
+            UpdatedAt
+        </dt>
+        <dd class = "col-sm-10">
+            UpdatedAt
+        </dd> -->
+    </dl>
+    <div>
+      <a [routerLink]="['/editBankDetail']">Edit</a> |
+      <a [routerLink]="['/bankDetail']">Back to List</a>
+  </div>
+</div>
+

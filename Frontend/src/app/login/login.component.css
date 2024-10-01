@@ -1,0 +1,31 @@
+form{
+  width:30%;
+  background-color: white;
+  padding: 50px;
+  border-radius:20px;
+  margin-top:60px;
+  margin-bottom:20px;
+}
+.btn-primary{
+  width:100%;
+  border: none;
+  border-radius:50px;
+}
+.form-control{
+  color:rgba(0,0,0,.87);
+  border-bottom-color: rgba(0,0,0,.42);
+  box-shadow:none !important;
+  border:none;
+  border-bottom:1px solid;
+  border-radius: 4px 4px 0 0;
+}
+.bi-graph-up {
+  font-size: 2rem !important;
+}
+/* h4{
+  font-size: 2rem !important;
+  font-weight: 700;
+} */
+.form-label{
+  font-family: 700 !important  ;
+}

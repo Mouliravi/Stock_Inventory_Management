@@ -1,0 +1,189 @@
+﻿@model SIM_Application.Models.UserDetailsWithBankDetails
+
+@{
+    ViewData["Title"] = "Transaction";
+    Layout = "_SIMLayout";
+}
+<partial name="_AlertMessage" />
+<h1>Transaction</h1>
+<br>
+<div class="card">
+    <h5 class="card-header">Add User Details</h5>
+    <div class="card-body">
+        <form asp-action="Transaction">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="UserDetails.UserName" class="form-control" placeholder="Enter Username">
+                        <label asp-for="UserDetails.UserName">User Name</label>
+                        <span asp-validation-for="UserDetails.UserName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="date" asp-for="UserDetails.DateOfBirth" class="form-control" placeholder="Enter Date of Birth">
+                        <label asp-for="UserDetails.DateOfBirth">Date Of Birth</label>
+                        <span asp-validation-for="UserDetails.DateOfBirth" class="text-danger"></span>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select asp-for="UserDetails.RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
+                        <label asp-for="UserDetails.RoleId">Role</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select asp-for="UserDetails.NationalityId" class="form-control" asp-items="ViewBag.NationalityId"></select>
+                        <label asp-for="UserDetails.NationalityId">Nationality</label>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select asp-for="UserDetails.GenderId" class="form-control" asp-items="ViewBag.GenderId"></select>
+                        <label asp-for="UserDetails.GenderId">Gender</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select asp-for="UserDetails.MaritalStatusId" class="form-control" asp-items="ViewBag.MaritalStatusId"></select>
+                        <label asp-for="UserDetails.MaritalStatusId">MaritalStatus</label>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="UserDetails.AddressLine1" class="form-control" placeholder="Enter Created At">
+                        <label asp-for="UserDetails.AddressLine1">Address Line</label>
+                        <span asp-validation-for="UserDetails.AddressLine1" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select asp-for="UserDetails.CityId" class="form-control" asp-items="ViewBag.CityId"></select>
+                        <label asp-for="UserDetails.CityId">City</label>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select asp-for="UserDetails.StateId" class="form-control" asp-items="ViewBag.StateId"></select>
+                        <label asp-for="UserDetails.StateId">State</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select asp-for="UserDetails.CountryId" class="form-control" asp-items="ViewBag.CountryId"></select>
+                        <label asp-for="UserDetails.CountryId">Country</label>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="UserDetails.MobileNumber" class="form-control" placeholder="Enter Mobile Number">
+                        <label asp-for="UserDetails.MobileNumber">Mobile Number</label>
+                        <span asp-validation-for="UserDetails.MobileNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="UserDetails.Occupation" class="form-control" placeholder="Enter Occupation">
+                        <label asp-for="UserDetails.Occupation">Occupation</label>
+                        <span asp-validation-for="UserDetails.Occupation" class="text-danger"></span>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="UserDetails.Email" class="form-control" placeholder="Enter Email">
+                        <label asp-for="UserDetails.Email">Email</label>
+                        <span asp-validation-for="UserDetails.Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="UserDetails.AnnualIncome" class="form-control" placeholder="Enter Annual Income">
+                        <label asp-for="UserDetails.AnnualIncome">Annual Income</label>
+                        <span asp-validation-for="UserDetails.AnnualIncome" class="text-danger"></span>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row g-5">
+                <div class="col-md ">
+                    <div class="form-floating">
+                        <input asp-for="UserDetails.BalanceAmount" class="form-control" placeholder="Enter Balance Amount">
+                        <label asp-for="UserDetails.BalanceAmount">Balance Amount</label>
+                        <span asp-validation-for="UserDetails.BalanceAmount" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="BankDetails.BankName" class="form-control" placeholder="Enter Bank Name">
+                        <label asp-for="BankDetails.BankName">Bank Name</label>
+                        <span asp-validation-for="BankDetails.BankName" class="text-danger"></span>
+                    </div>
+                    
+                </div>
+            </div><br />
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="BankDetails.Ifsc" class="form-control" placeholder="Enter IFSC Code">
+                        <label asp-for="BankDetails.Ifsc">IFSC Code</label>
+                        <span asp-validation-for="BankDetails.Ifsc" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="BankDetails.Mcir" class="form-control" placeholder="Enter MCIR">
+                        <label asp-for="BankDetails.Mcir">MCIR</label>
+                        <span asp-validation-for="BankDetails.Mcir" class="text-danger"></span>
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="BankDetails.AccountNumber" class="form-control" placeholder="Enter Account Number">
+                        <label asp-for="BankDetails.AccountNumber">Account Number</label>
+                        <span asp-validation-for="BankDetails.AccountNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input asp-for="BankDetails.AccountBalance" class="form-control" style="width:600px;" placeholder="Enter Account Balance">
+                        <label asp-for="BankDetails.AccountBalance">Account Balance</label>
+                        <span asp-validation-for="BankDetails.AccountBalance" class="text-danger"></span>
+                    </div>
+                </div>
+            </div><br>
+            <button type="submit" class="btn btn-outline-primary" style="margin-left:593px;margin-top:8px">Submit</button>
+            @* <div class="row g-5">
+                <div class="col-md ">
+                    <div class="form-floating">
+                        <input asp-for="AccountBalance" class="form-control" style="width:600px;" placeholder="Enter Account Balance">
+                        <label asp-for="AccountBalance">Account Balance</label>
+                        <span asp-validation-for="AccountBalance" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    @* <button type="submit" formaction="@Url.Action("AddUserDetails", "UserDetails")" class="btn btn-outline-primary" style="margin-left:250px;margin-top:10px">Previous</button> 
+                </div>
+            </div> *@
+
+        </form>
+
+    </div>
+</div>
+

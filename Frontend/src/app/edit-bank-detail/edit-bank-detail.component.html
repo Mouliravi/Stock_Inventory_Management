@@ -1,0 +1,67 @@
+
+<section class="u-bg custom-width rounded p-5">
+
+<h1 class="text-success">Bank Detail</h1>
+<br>
+<div class="card user-bg">
+    <h5 class="card-header">Update the Bank Details</h5>
+    <div class="card-body">
+        <form [formGroup]="rForm" (ngSubmit)="getData()">
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" placeholder="Enter Bank Name" formControlName="BankName">
+                        <label for="BankName">Bank Name</label>
+                        <span *ngIf="BankName && BankName.invalid && BankName.touched" class="errorMessage">Please enter a valid bank name</span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" placeholder="Enter IFSC Code" formControlName="Ifsc">
+                        <label for="Ifsc">IFSC Code</label>
+                        <span *ngIf="Ifsc && Ifsc.invalid && Ifsc.touched" class="errorMessage">Please enter a valid IFSC code</span>
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row g-5">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control" placeholder="Enter MCIR" formControlName="Mcir">
+                        <label for="Mcir">MCIR</label>
+                        <span *ngIf="Mcir && Mcir.invalid && Mcir.touched" class="errorMessage">Please enter a valid MCIR</span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control" placeholder="Enter Account Number" formControlName="AccountNumber">
+                        <label for="AccountNumber">Account Number</label>
+                        <span *ngIf="AccountNumber && AccountNumber.invalid && AccountNumber.touched" class="errorMessage">Please enter a valid account number</span>
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row g-5">
+                <div class="col-md ">
+                    <div class="form-floating">
+                        <input type="number" class="form-control" placeholder="Enter Account Balance" formControlName="AccountBalance">
+                        <label for="AccountBalance">Account Balance</label>
+                        <span *ngIf="AccountBalance && AccountBalance.invalid && AccountBalance.touched" class="errorMessage">Please enter a valid account balance</span>
+                    </div>
+                </div>
+                <div class="col-md ">
+                  <div class="form-group custom-margin ">
+                    <button type="submit" class="btn btn-outline-primary">Update</button>
+                </div>
+                </div>
+            </div>
+            <br />
+
+            <div class="text-center">
+
+            </div>
+        </form>
+    </div>
+</div>
+</section>
+<br>

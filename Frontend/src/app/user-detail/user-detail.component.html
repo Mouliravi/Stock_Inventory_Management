@@ -1,0 +1,60 @@
+
+<div *ngIf="status=='Added'" class="alert alert-success alert-dismissible" role="alert">
+  <div>User Detail is successfully added</div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div *ngIf="status=='Not Added'" class="alert alert-danger alert-dismissible" role="alert">
+  <div>User Detail is not successfully added</div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div *ngIf="status=='Deleted'" class="alert alert-success alert-dismissible" role="alert">
+  <div>User Detail is successfully deleted</div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div *ngIf="status=='Not Deleted'"class="alert alert-danger alert-dismissible" role="alert">
+  <div>User Detail is not successfully deleted</div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+
+<section class="user-bg  rounded p-5">
+  <h1 class="text-success">User Details</h1>
+<a [routerLink]="['/createUserDetail']">Create new</a><br><br>
+<table class="table table-striped ">
+  <thead>
+    <tr class="text-center">
+      <th>User Name</th>
+      <th>Date of Birth</th>
+      <th>Mobile Number</th>
+      <th>Occupation</th>
+      <th>Email</th>
+      <th>Annual Income</th>
+      <th>State</th>
+      <th>Bank Details ID</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userDetails" class="text-center">
+      <td>{{ user.UserName }}</td>
+      <td>{{ user.DateOfBirth }}</td>
+      <td>{{ user.MobileNumber }}</td>
+      <td>{{ user.Occupation }}</td>
+      <td>{{ user.Email }}</td>
+      <td>{{ user.AnnualIncome }}</td>
+      <td>{{ getStateName(user.StateId) }}</td>
+      <td>{{ user.BankDetailsId }}</td>
+      <td>
+        <a class="nav-link" (click)="editUserDetail(user.UserId)"><i class="bi bi-pencil-square"></i></a>
+        <a class="nav-link" (click)="viewUserDetail(user.UserId)"><i class="bi bi-eye"></i></a>
+        <a class="nav-link" (click)="deleteUserDetail(user.UserId)"><i class="bi bi-trash"></i></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</section>
+<br>

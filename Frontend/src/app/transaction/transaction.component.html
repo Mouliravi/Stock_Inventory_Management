@@ -1,0 +1,181 @@
+<!-- <partial name="_AlertMessage" /> -->
+<h1>Transaction</h1>
+<br>
+<div class="card">
+  <h5 class="card-header">Add User Details</h5>
+  <div class="card-body">
+    <form [formGroup]="rForm" (ngSubmit)="getData()">
+          <div class="row g-5">
+              <div class="col-md">
+                <div class="form-floating">
+                  <input type="text" class="form-control" placeholder="Enter your name" formControlName="UserName" >
+                  <label for="UserName">User Name</label>
+                  <span *ngIf="UserName && UserName.invalid && UserName.touched" class="errorMessage">Please enter a valid user name</span>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-group form-floating">
+                  <input type="date" class="form-control" placeholder="Enter your date of birth" formControlName="DateOfBirth" >
+                  <label for="DateOfBirth">Date Of Birth</label>
+                  <span *ngIf="DateOfBirth && DateOfBirth.invalid && DateOfBirth.touched" class="errorMessage">Please enter a valid date of birth</span>
+                </div>
+              </div>
+          </div><br>
+          <div class="row g-5">
+              <div class="col-md">
+                <div class="form-group form-floating">
+                  <select class="form-control" formControlName="RoleId"  >
+                    <option *ngFor="let role of roles" [value]="role.roleId">{{ role.role }}</option>
+                  </select>
+                  <label for="RoleId">Role</label><br>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-group form-floating">
+                  <select class="form-control" formControlName="NationalityId">
+                    <option *ngFor="let nationality of nationalities" [value]="nationality.nationalityId">{{ nationality?.nationality }}</option>
+                  </select>
+                  <label for="NationalityId">Nationality</label><br>
+                </div>
+              </div>
+          </div><br>
+          <div class="row g-5">
+              <div class="col-md">
+                <div class="form-group form-floating">
+                  <select class="form-control" formControlName="GenderId" >
+                    <option *ngFor="let gender of genders" [value]="gender.genderId">{{ gender.gender }}</option>
+                  </select>
+                  <label for="GenderId">Gender</label><br>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-group form-floating">
+                  <select class="form-control" formControlName="MaritalStatusId" >
+                    <option *ngFor="let maritalStatus of maritalStatuses" [value]="maritalStatus.maritalStatusId">{{ maritalStatus.maritalStatus }}</option>
+                  </select>
+                  <label for="MaritalStatusId">Marital Status</label><br>
+                </div>
+              </div>
+          </div><br>
+          <div class="row g-5">
+              <div class="col-md">
+                <div class="form-group form-floating">
+                  <input type="text" class="form-control" placeholder="Enter your address" formControlName="AddressLine1" >
+                  <label for="AddressLine1">Address Line</label>
+                  <span *ngIf="AddressLine1 && AddressLine1.invalid && AddressLine1.touched" class="errorMessage">Please enter your address</span>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-group form-floating">
+                  <select class="form-control" formControlName="CityId" >
+                    <option *ngFor="let city of cities" [value]="city.cityId">{{ city.city }}</option>
+                  </select>
+                  <label for="CityId">City</label><br>
+                </div>
+              </div>
+          </div><br>
+          <div class="row g-5">
+              <div class="col-md">
+                <div class="form-group form-floating">
+                  <select class="form-control" formControlName="StateId" >
+                    <option *ngFor="let state of states" [value]="state.stateId">{{ state.state }}</option>
+                  </select>
+                  <label for="StateId">State</label><br>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-group form-floating">
+                  <select class="form-control" formControlName="CountryId" >
+                    <option *ngFor="let country of countries" [value]="country.countryId">{{country.country }}</option>
+                  </select>
+                  <label for="CountryId">Country</label><br>
+                </div>
+              </div>
+          </div><br>
+          <div class="row g-5">
+              <div class="col-md">
+                <div class="form-group form-floating">
+                  <input type="text" class="form-control" placeholder="Enter your mobile number" formControlName="MobileNumber" >
+                  <label for="MobileNumber">Mobile Number</label>
+                  <span *ngIf="MobileNumber && MobileNumber.invalid && MobileNumber.touched" class="errorMessage">Please enter a valid email</span>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-group form-floating">
+                  <input type="text" class="form-control" placeholder="Enter your occupation" formControlName="Occupation" >
+                  <label for="Occupation">Occupation</label>
+                  <span *ngIf="Occupation && Occupation.invalid && Occupation.touched" class="errorMessage">Please enter a valid email</span>
+                </div>
+              </div>
+          </div><br>
+          <div class="row g-5">
+              <div class="col-md">
+                <div class="form-group form-floating">
+                  <input type="email" class="form-control" placeholder="Enter your email" formControlName="Email" >
+                  <label for="Email">Email</label>
+                  <span *ngIf="Email && Email.invalid && Email.touched" class="errorMessage">Please enter a valid email</span>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-group form-floating">
+                  <input type="text" class="form-control" placeholder="Enter your annual income" formControlName="AnnualIncome" >
+                  <label for="AnnualIncome">Annual Income</label>
+                  <span *ngIf="AnnualIncome && AnnualIncome.invalid && AnnualIncome.touched" class="errorMessage">Please enter a valid annual income</span>
+                </div>
+              </div>
+          </div><br>
+          <div class="row g-5">
+              <div class="col-md ">
+                <div class="form-group form-floating">
+                  <input type="text" class="form-control" placeholder="Enter your balance amount" formControlName="BalanceAmount" >
+                  <label for="BalanceAmount">Balance Amount</label>
+                  <span *ngIf="BalanceAmount && BalanceAmount.invalid && BalanceAmount.touched" class="errorMessage">Please enter a valid balance amount</span>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Bank Name" formControlName="BankName">
+                    <label for="BankName">Bank Name</label>
+                    <span *ngIf="BankName && BankName.invalid && BankName.touched" class="errorMessage">Please enter a valid bank name</span>
+                </div>
+            </div>
+            </div><br />
+            <div class="row g-5">
+              <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter IFSC Code" formControlName="Ifsc">
+                    <label for="Ifsc">IFSC Code</label>
+                    <span *ngIf="Ifsc && Ifsc.invalid && Ifsc.touched" class="errorMessage">Please enter a valid IFSC code</span>
+                </div>
+            </div>
+            <div class="col-md">
+              <div class="form-floating">
+                  <input type="number" class="form-control" placeholder="Enter MCIR" formControlName="Mcir">
+                  <label for="Mcir">MCIR</label>
+                  <span *ngIf="Mcir && Mcir.invalid && Mcir.touched" class="errorMessage">Please enter a valid MCIR</span>
+              </div>
+          </div>
+            </div><br>
+
+            <div class="row g-5">
+              <div class="col-md">
+                <div class="form-floating">
+                    <input type="number" class="form-control" placeholder="Enter Account Number" formControlName="AccountNumber">
+                    <label for="AccountNumber">Account Number</label>
+                    <span *ngIf="AccountNumber && AccountNumber.invalid && AccountNumber.touched" class="errorMessage">Please enter a valid account number</span>
+                </div>
+            </div>
+            <div class="col-md ">
+              <div class="form-floating">
+                  <input type="number" class="form-control" placeholder="Enter Account Balance" formControlName="AccountBalance">
+                  <label for="AccountBalance">Account Balance</label>
+                  <span *ngIf="AccountBalance && AccountBalance.invalid && AccountBalance.touched" class="errorMessage">Please enter a valid account balance</span>
+              </div>
+          </div>
+            </div><br>
+            <button type="submit" class="btn btn-outline-primary" style="margin-left:593px;margin-top:8px">Submit</button>
+        </form>
+
+    </div>
+</div>
+

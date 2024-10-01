@@ -1,0 +1,78 @@
+﻿@model IEnumerable<SIM_Application.Models.BankDetail>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_SIMLayout";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BankDetailsId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BankName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ifsc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mcir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountBalance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BankDetailsId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BankName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ifsc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mcir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountBalance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BankDetailsId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BankDetailsId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BankDetailsId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

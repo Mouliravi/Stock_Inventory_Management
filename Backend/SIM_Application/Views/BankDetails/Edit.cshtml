@@ -1,0 +1,72 @@
+﻿@model SIM_Application.Models.BankDetail
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "_SIMLayout";
+}
+
+<h1>Update</h1>
+
+<hr />
+<div class="card">
+    <h5 class="card-header">Edit Bank Details</h5>
+    <div class="card-body">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BankDetailsId" />
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input asp-for="BankName" class="form-control" placeholder="Enter Bank Name">
+                        <label asp-for="BankName">Bank Name</label>
+                        <span asp-validation-for="BankName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input asp-for="Ifsc" class="form-control" placeholder="Enter IFSC Code">
+                        <label asp-for="Ifsc">IFSC Code</label>
+                        <span asp-validation-for="Ifsc" class="text-danger"></span>
+                    </div>
+                </div>
+            </div><br />
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input asp-for="Mcir" class="form-control" placeholder="Enter MCIR">
+                        <label asp-for="Mcir">MCIR</label>
+                        <span asp-validation-for="Mcir" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input asp-for="AccountNumber" class="form-control" placeholder="Enter Account Number">
+                        <label asp-for="AccountNumber">Account Number</label>
+                        <span asp-validation-for="AccountNumber" class="text-danger"></span>
+                    </div>
+                </div>
+            </div><br />
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input asp-for="AccountBalance" class="form-control" placeholder="Enter Account Balance">
+                        <label asp-for="AccountBalance">Account Balance</label>
+                        <span asp-validation-for="AccountBalance" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,21 @@
+<section class="u-bg rounded p-5">
+<h1 class="text-success">Fetch User Details</h1>
+<br />
+<div *ngIf="code" class="alert alert-danger alert-dismissible" role="alert">
+  <div>No User Detail is found</div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="card w-100 user-bg">
+  <h5 class="card-header">Fetch By Id</h5>
+    <div class="card-body">
+        <form (ngSubmit)="sendUserId($event)">
+            <div class="form-group form-floating col-8">
+              <input type="number" class="form-control" name="userId" placeholder="Enter User Id" [(ngModel)]="userId">
+              <label for="userId">Enter User Id</label>
+            </div><br>
+            <button type="submit" class="btn btn-primary">Fetch</button>
+        </form>
+    </div>
+</div>
+</section>
+<br>

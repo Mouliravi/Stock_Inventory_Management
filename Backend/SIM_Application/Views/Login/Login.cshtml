@@ -1,0 +1,51 @@
+﻿@model SIM_Application.Models.Admin;
+
+@{
+	ViewData["Title"] = "Login";
+	Layout = "_LoginLayout";
+}
+
+<section class="h-50">
+	<div class="container">
+		<div class="row justify-content-sm-center">
+			<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+				<div class="text-center my-5">
+					<img src="~/img/logo1.png" alt="Logo" width="50" height="50" id="logo" class="d-inline-block align-text-top">
+				</div>
+				<div class="card shadow-lg">
+					<div class="card-body p-5">
+						<h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
+						<form asp-controller="Login" asp-action="Login" method="post" class="needs-validation">
+							<div class="mb-3">
+								<label class="mb-2 text-muted" for="name">Name</label>
+								<input type="text" class="form-control" asp-for="Name" required autofocus>
+								<span asp-validation-for="Name" class="text-danger"></span>
+							</div>
+
+							<div class="mb-3">
+								<div class="mb-2 w-100">
+									<label class="text-muted" for="password">Password</label>
+								</div>
+								<input asp-for="Password" type="password" class="form-control" required>
+							</div>
+							@{
+								if (ViewData["Message"] != null)
+								{
+									<span class="text-danger">@ViewData["Message"]</span>
+								}
+							}
+							<div class="d-flex align-items-center">
+								<button type="submit" class="btn btn-primary ms-auto">
+									Login
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="text-center mt-5 text-muted">
+					Copyright &copy; 2024 &mdash; Stock Inventory System
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

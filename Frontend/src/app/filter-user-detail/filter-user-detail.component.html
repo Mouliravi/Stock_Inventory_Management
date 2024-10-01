@@ -1,0 +1,181 @@
+<section class="user-bg rounded p-5 container custom-width">
+  <h1 class="text-success">
+    Filter Users
+  </h1>
+  <a (click)="showForm('annualIncome')" class="btn cursor-pointer">Filter By Annual Income</a><br>
+  <a (click)="showForm('state')" class="btn cursor-pointer">Filter By State</a><br>
+  <a (click)="showForm('maritalStatus')" class="btn cursor-pointer">Filter By Marital Status</a><br>
+  <a (click)="showForm('age')" class="btn cursor-pointer">Filter By Age</a><br>
+  <a (click)="showForm('gender')" class="btn cursor-pointer">Filter By Gender</a><br><br>
+
+  <form *ngIf="showAnnualIncomeForm" (ngSubmit)="filterUsers('annualIncome', annualIncome)">
+    <label class="me-1">User's Annual Income greater than: </label>
+    <input type="number" class="me-1" [(ngModel)]="annualIncome" name="annualIncome">
+    <button type="submit">Filter</button>
+  </form>
+
+  <form *ngIf="showAgeForm" (ngSubmit)="filterUsers('age', age)">
+    <label class="me-1">User's Age greater than: </label>
+    <input type="number" class="me-1" [(ngModel)]="age" name="age">
+    <button type="submit">Filter</button>
+  </form>
+
+  <form *ngIf="showStateForm" (ngSubmit)="filterUsers('state', selectedState)">
+    <label class="me-1">Select State: </label>
+    <select [(ngModel)]="selectedState" name="state" class="me-1">
+      <option *ngFor="let state of states" [value]="state.stateId">{{ state.state }}</option>
+    </select>
+    <button type="submit">Filter</button>
+  </form>
+
+  <form *ngIf="showGenderForm" (ngSubmit)="filterUsers('gender', selectedGender)">
+    <label class="me-1">Select Gender: </label>
+    <select [(ngModel)]="selectedGender" name="gender" class="me-1">
+      <option *ngFor="let gender of genders" [value]="gender.genderId">{{ gender.gender }}</option>
+    </select>
+    <button type="submit">Filter</button>
+  </form>
+
+  <form *ngIf="showMaritalStatusForm" (ngSubmit)="filterUsers('maritalStatus', selectedMaritalStatus)">
+    <label class="me-1">Select Marital Status: </label>
+    <select [(ngModel)]="selectedMaritalStatus" name="maritalStatus" class="me-1">
+      <option *ngFor="let status of maritalStatuses" [value]="status.maritalStatusId">{{ status.maritalStatus }}</option>
+    </select>
+    <button type="submit">Filter</button>
+  </form>
+
+  <!-- Other HTML code remains unchanged -->
+
+  <div *ngIf="filteredByAge.length > 0">
+    <h2 class="text-success">Filtered Users whose age is greater than {{age}}</h2>
+    <table class="table table-striped">
+      <thead>
+          <tr class="text-center">
+              <th>
+                  UserName
+              </th>
+              <th>
+                 Date of Birth
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+              <tr *ngFor="let user of filteredByAge" class="text-center">
+                  <td>
+                      {{user.userName}}
+                  </td>
+                  <td>
+                      {{user.dateOfBirth}}
+                  </td>
+              </tr>
+      </tbody>
+  </table>
+  </div>
+
+  <div *ngIf="filteredByAnnualIncome.length > 0">
+    <h2 class="text-success">Filtered Users whose AnnualIncome is greater than {{annualIncome}}</h2>
+    <table class="table table-striped">
+      <thead>
+          <tr class="text-center">
+              <th>
+                  UserName
+              </th>
+              <th>
+                 Annual Income
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+              <tr *ngFor="let user of filteredByAnnualIncome" class="text-center">
+                  <td>
+                      {{user.userName}}
+                  </td>
+                  <td>
+                      {{user.annualIncome}}
+                  </td>
+              </tr>
+      </tbody>
+  </table>
+  </div>
+
+  <div *ngIf="filteredByState.length > 0">
+    <h2 class="text-success">Filtered Users whose state is {{ state }}</h2>
+    <table class="table table-striped">
+      <thead>
+          <tr class="text-center">
+              <th>
+                  UserName
+              </th>
+              <th>
+                  State
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+              <tr *ngFor="let user of filteredByState" class="text-center">
+                  <td>
+                      {{user.UserName}}
+                  </td>
+                  <td>
+                    {{ user.State.State }}
+                  </td>
+              </tr>
+      </tbody>
+  </table>
+  </div>
+
+  <div *ngIf="filteredByMaritalStatus.length > 0">
+    <h2 class="text-success">Filtered Users those who are {{ maritalStatus }}</h2>
+    <table class="table table-striped">
+      <thead>
+          <tr class="text-center">
+              <th>
+                  UserName
+              </th>
+              <th>
+                 MaritalStatus
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+              <tr *ngFor="let user of filteredByMaritalStatus" class="text-center">
+                  <td>
+                      {{user.UserName}}
+                  </td>
+                  <td>
+                    {{ user.MaritalStatus.MaritalStatus }}
+                  </td>
+              </tr>
+      </tbody>
+  </table>
+  </div>
+
+
+  <div *ngIf="filteredByGender.length > 0">
+    <h2 class="text-success">Filtered Users those who are {{ gender }}</h2>
+    <table class="table table-striped">
+      <thead>
+          <tr>
+              <th>
+                  UserName
+              </th>
+              <th>
+                 Gender
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+              <tr *ngFor="let user of filteredByGender">
+                  <td>
+                      {{user.UserName}}
+                  </td>
+                  <td>
+                    {{ user.Gender.Gender }}
+                  </td>
+              </tr>
+      </tbody>
+  </table>
+  </div>
+
+</section>
+<br>

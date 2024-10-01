@@ -1,0 +1,109 @@
+<!-- <partial name="_AlertMessage" /> -->
+<div *ngIf="status=='Bank Details Edited'" class="alert alert-success alert-dismissible" role="alert">
+  <div>Bank Detail is successfully edited</div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<section class="user-bg rounded p-5">
+  <div>
+    <h4 class="float-start text-success">User Details</h4>
+    <div class="float-end">
+      <a [routerLink]="['/editUserDetail']"
+        ><i class="bi bi-pencil-square"></i
+      ></a>
+      |
+      <a [routerLink]="['/userDetail']"><i class="bi bi-arrow-bar-left"></i></a>
+    </div>
+    <br />
+    <hr />
+
+    <div class="row">
+      <div class="col-sm">
+        <div>UserName</div>
+        <div>DateOfBirth</div>
+        <div>MobileNumber</div>
+        <div>Occupation</div>
+        <div>Email</div>
+        <div>AnnualIncome</div>
+        <div>BalanceAmount</div>
+        <div>Gender</div>
+      </div>
+      <div class="col-sm">
+        <div>
+          {{ userDetail.UserName }}
+        </div>
+
+      <div>
+        {{ userDetail.DateOfBirth }}
+      </div>
+
+      <div>
+        {{ userDetail.MobileNumber }}
+      </div>
+
+      <div>
+        {{ userDetail.Occupation }}
+      </div>
+
+      <div>
+        {{ userDetail.Email }}
+      </div>
+
+      <div>
+        {{ userDetail.AnnualIncome }}
+      </div>
+
+      <div>
+        {{ userDetail.BalanceAmount }}
+      </div>
+
+      <div>
+        {{ userDetail.Gender.Gender }}
+      </div>
+    </div>
+  </div>
+</div><br>
+
+  <div>
+    <h4 class="float-start text-success">User's Stock Details</h4>
+    <div class="float-end">
+      <button class="btn btn-light" type="button">
+        <a (click)="addStockDetail(userDetail.UserId)">Add</a>
+      </button>
+    </div>
+    <br />
+    <hr />
+    <table class="table table-striped text-center">
+      <thead>
+        <tr class="text-center">
+          <th>Stock ID</th>
+          <th>Provider Name</th>
+          <th>Broker Name</th>
+          <th>Purchased Quantity</th>
+          <th>Total Investment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- @foreach (var orderDetail in Model.OrderDetails)
+                { -->
+        <tr *ngFor="let order of ordersDetail" class="text-center">
+          <td>
+            {{ order.UserStock.StockId }}
+          </td>
+          <td>
+            {{ order.UserStock.Stock.Provider.ProviderName }}
+          </td>
+          <td>
+            {{ order.UserStock.Stock.Broker.BrokerName }}
+          </td>
+          <td>
+            {{ order.PurchasedQuantity }}
+          </td>
+          <td>
+            {{ order.TotalInvestment }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<br>
